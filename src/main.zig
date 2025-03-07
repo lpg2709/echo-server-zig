@@ -1,16 +1,8 @@
 const std = @import("std");
 const net = std.net;
-const builtin = @import("builtin");
-const zig_version = builtin.zig_version;
-const is_zig_11 = zig_version.minor == 11;
 const Server = @import("server.zig").Server;
 
 pub fn main() !void {
-    const stderr = std.io.getStdErr();
-    if (!is_zig_11) {
-        try stderr.writer().print("Invalid zig version. Expected: zig 0.11.0 | Get: {}.{}.{}\n", .{ zig_version.major, zig_version.minor, zig_version.patch });
-        return;
-    }
     var server = try Server.init();
     defer server.deinit();
 
