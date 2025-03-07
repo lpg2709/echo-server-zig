@@ -1,12 +1,12 @@
 # echo-server-zig
 
-Simple TCP echo server write in [Zig 0.13.0](https://ziglang.org/download/#release-0.13.0)
+Simple TCP echo server write in [Zig 0.14.0](https://ziglang.org/download/#release-0.14.0)
 
 **Note:**
 
 ```
 Because Zig is not yet finalized, there are a lot of changes in the standard
-library, for this reason I locked this example in version 0.13.0 of the language
+library, for this reason I locked this example in version 0.14.0 of the language
 ```
 
 You can see changes between versions by comparing branches.
@@ -27,7 +27,7 @@ Test the code:
 zig test src/main.zig
 ```
 
-> [Zig 0.13.0](https://ziglang.org/documentation/0.13.0/) required!
+> [Zig 0.14.0](https://ziglang.org/documentation/0.14.0/) required!
 
 ## Compare versions
 

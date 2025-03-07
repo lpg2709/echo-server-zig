@@ -38,7 +38,7 @@ pub fn build(b: *std.Build) void {
     test_step.dependOn(&run_unit_tests.step);
 
     comptime {
-        const zig_version = "0.13.0";
+        const zig_version = "0.14.0";
         const supported_zig = std.SemanticVersion.parse(zig_version) catch unreachable;
         if (buildin.zig_version.order(supported_zig) != .eq) {
             @compileError(std.fmt.comptimePrint("Unsupporded zig version ({}). Required Zig version '{s}'!", .{ buildin.zig_version, zig_version }));
